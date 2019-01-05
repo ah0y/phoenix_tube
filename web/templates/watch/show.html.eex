@@ -1,0 +1,68 @@
+<h2><%= @room.title %></h2>
+<div>
+
+
+<div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title"> Playlist </h3>
+		</div>
+		<div id="playlist-container" class="panel-body playlist" style="overflow-y:auto; max-height:100px">
+
+		</div>
+		<div class = "panel-footer">
+			<input id="playlist-input"
+				class="form-control"
+				placeholder="Add video..."></input>
+		</div>
+	</div>
+</div>
+
+
+</div>
+<div class="row">
+	<div class="col-sm-7">
+		<%= content_tag :div, id: "video",
+			data: [id: @room.id, player_id: player_id(@room)] do %>
+		<% end %>
+	</div>
+<div id="chat-view" class="col-sm-5" style="position: relative;">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Chat</h3>
+		</div>
+		<div id="msg-container" class="panel-body annotations" style="overflow-y:auto; max-height:100px">
+
+		</div>
+		<div class = "panel-footer" style="overflow: hidden; ">
+			<input id="msg-input"  style="width: 75%; float:left;"
+				class="form-control"
+				placeholder="Comment..."></input>
+
+			<button id="users" class="form-control" style="width: 25%; float:right;" type="submit">
+			Users
+			</button>
+		</div>
+	</div>
+</div>
+<div id="user-view" class="col-sm-5" style="position: relative; display:none">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Online</h3>
+		</div>
+		<div id="users-container" class="panel-body annotations" style="overflow-y:auto; max-height:100px">
+
+		</div>
+		<div class = "panel-footer" style="overflow: hidden; ">
+			<input id="msg-input"  style="width: 75%; float:left;"
+				class="form-control"
+				disabled="disabled"
+				placeholder="Comment..."></input>
+
+			<button id="chat" class="form-control" style="width: 25%; float:right;" type="submit">
+			Chat
+			</button>
+		</div>
+	</div>
+</div>
+</div>

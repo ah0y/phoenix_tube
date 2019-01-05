@@ -1,0 +1,31 @@
+/* This file is for your main application css. */
+
+.indicator.online {
+    background: #28B62C;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    -webkit-animation: pulse-animation 2s infinite linear;
+}
+
+
+@-webkit-keyframes pulse-animation {
+    0% { -webkit-transform: scale(1); }
+    25% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.2) }
+    75% { -webkit-transform: scale(1); }
+    100% { -webkit-transform: scale(1); }
+}
+
+.indicator.offline {
+    background: dimgray;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    -webkit-animation: pulse-animation 0s infinite linear;
+
+}
+
+
