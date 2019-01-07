@@ -8,6 +8,7 @@
     <meta name="author" content="">
 
     <title>Hire Me!</title>
+    <li><a href="https://github.com/ah0y" rel="me">Github</a></li>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
